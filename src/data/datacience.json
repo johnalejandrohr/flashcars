@@ -1,0 +1,103 @@
+[
+    {
+        "question": "¿Qué es una supernova?",
+        "response": "Una supernova es una explosión estelar que ocurre durante las últimas etapas de la evolución de una estrella. Durante esta explosión, una estrella puede llegar a brillar tan intensamente como una galaxia entera antes de desaparecer lentamente.",
+        "state": false
+    },
+    {
+        "question": "¿Qué es un agujero negro?",
+        "response": "Un agujero negro es una región del espacio donde la gravedad es tan fuerte que nada, ni siquiera la luz, puede escapar de su atracción. Los agujeros negros se forman a partir del colapso gravitacional de estrellas masivas al final de su ciclo de vida.",
+        "state": false
+    },
+    {
+        "question": "¿Qué es la expansión del universo?",
+        "response": "La expansión del universo es el fenómeno por el cual el espacio entre las galaxias está en aumento con el tiempo. Esto significa que las galaxias se alejan unas de otras, lo que sugiere que el universo se está expandiendo desde un estado mucho más denso y caliente en el pasado.",
+        "state": false
+    },
+    {
+        "question": "¿Qué es la radiación cósmica de fondo?",
+        "response": "La radiación cósmica de fondo es una radiación electromagnética que llena todo el espacio observable en el universo. Se cree que es un remanente del Big Bang, el evento que marcó el inicio del universo observable hace aproximadamente 13.8 mil millones de años.",
+        "state": false
+    },
+    {
+        "question": "¿Cuál es la teoría del multiverso?",
+        "response": "La teoría del multiverso es una hipótesis cosmológica que sugiere que existen múltiples universos, cada uno con sus propias leyes físicas y condiciones iniciales. Esta teoría se propone para explicar ciertas observaciones que no pueden ser explicadas por un solo universo.",
+        "state": true
+    },
+    {
+        "question": "¿Qué es la materia oscura?",
+        "response": "La materia oscura es una forma de materia que no emite, absorbe ni refleja luz electromagnética, lo que significa que no interactúa con la luz y, por lo tanto, no puede ser detectada directamente por telescopios u otros instrumentos ópticos. Se cree que la materia oscura compone aproximadamente el 27% de la masa y energía total del universo.",
+        "state": false
+    },
+    {
+        "question": "¿Qué es la energía oscura?",
+        "response": "La energía oscura es una forma de energía hipotética que se cree que está causando la aceleración en la expansión del universo. A diferencia de la materia oscura, la energía oscura ejerce una presión negativa, lo que contribuye a la expansión cósmica cada vez más rápida.",
+        "state": false
+    },
+    {
+        "question": "¿Qué son los quásares?",
+        "response": "Los quásares son núcleos galácticos activos extremadamente brillantes y distantes, alimentados por agujeros negros supermasivos en el centro de las galaxias. Emiten grandes cantidades de energía electromagnética y son algunos de los objetos más luminosos y lejanos en el universo observado.",
+        "state": false
+    },
+    {
+        "question": "¿Qué es la lente gravitatoria?",
+        "response": "La lente gravitatoria es un fenómeno predicho por la teoría de la relatividad general de Einstein, donde la gravedad de un objeto masivo, como una galaxia, distorsiona y curva la luz de un objeto detrás de él, creando una imagen ampliada y distorsionada del objeto de fondo.",
+        "state": false
+    },
+    {
+        "question": "¿Cuál es la edad del universo?",
+        "response": "La edad del universo se estima en aproximadamente 13.8 mil millones de años, basándose en observaciones de la radiación cósmica de fondo y la expansión del universo. Esta edad se deriva de nuestras mejores teorías actuales sobre la evolución del universo desde el Big Bang.",
+        "state": false
+    },
+    {
+      "question": "¿Qué es la ciencia de datos?",
+      "response": "La ciencia de datos es un campo interdisciplinario que utiliza técnicas, procesos, algoritmos y sistemas científicos para extraer conocimientos y percepciones de datos estructurados y no estructurados.",
+      "state": false
+    },
+    {
+      "question": "¿Cuál es el proceso típico en un proyecto de ciencia de datos?",
+      "response": "El proceso típico de ciencia de datos incluye la definición del problema, la recopilación y limpieza de datos, la exploración y visualización de datos, la construcción de modelos, la evaluación y ajuste del modelo, y la presentación de resultados.",
+      "state": false
+    },
+    {
+      "question": "¿Qué es el aprendizaje automático (machine learning)?",
+      "response": "El aprendizaje automático es un subcampo de la ciencia de datos que se enfoca en el desarrollo de algoritmos y modelos que permiten a las computadoras mejorar su rendimiento en una tarea específica a través de la experiencia, sin ser programadas explícitamente.",
+      "state": false
+    },
+    {
+      "question": "¿Cuál es la diferencia entre el aprendizaje supervisado y el no supervisado?",
+      "response": "En el aprendizaje supervisado, el modelo se entrena utilizando un conjunto de datos etiquetados, mientras que en el aprendizaje no supervisado, el modelo se entrena en datos no etiquetados y encuentra patrones por sí mismo.",
+      "state": false
+    },
+    {
+      "question": "¿Qué son las técnicas de preprocesamiento de datos en ciencia de datos?",
+      "response": "Las técnicas de preprocesamiento incluyen la limpieza de datos, la normalización, la reducción de dimensionalidad y la ingeniería de características para preparar los datos para el modelado y análisis.",
+      "state": false
+    },
+    {
+      "question": "¿Qué es la validación cruzada (cross-validation)?",
+      "response": "La validación cruzada es una técnica utilizada para evaluar el rendimiento de un modelo al dividir los datos en conjuntos de entrenamiento y prueba múltiples y calcular las métricas de rendimiento promedio.",
+      "state": true
+    },
+    {
+      "question": "¿Qué es el sesgo (bias) y la varianza en el contexto de modelos de aprendizaje automático?",
+      "response": "El sesgo se refiere a la simplificación excesiva de un modelo, mientras que la varianza se refiere a la sensibilidad del modelo a pequeñas variaciones en los datos de entrada. Encontrar un equilibrio entre sesgo y varianza es crucial para un modelo efectivo.",
+      "state": false
+    },
+    {
+      "question": "¿Qué es la regresión lineal?",
+      "response": "La regresión lineal es un método estadístico que modela la relación lineal entre una variable dependiente y una o más variables independientes, con el objetivo de predecir el valor de la variable dependiente.",
+      "state": false
+    },
+    {
+      "question": "¿Qué es la clasificación en aprendizaje automático?",
+      "response": "La clasificación es una técnica de aprendizaje automático que se utiliza para predecir la categoría o clase a la que pertenece un objeto basándose en sus características.",
+      "state": false
+    },
+    {
+      "question": "¿Qué es el sobreajuste (overfitting) en modelos de aprendizaje automático?",
+      "response": "El sobreajuste ocurre cuando un modelo se entrena demasiado bien con un conjunto de datos específico y, por lo tanto, no generaliza bien con datos nuevos y no vistos. Esto puede ocurrir cuando un modelo es demasiado complejo para los datos disponibles.",
+      "state": false
+    }
+  ]
+  
