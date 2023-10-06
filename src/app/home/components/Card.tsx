@@ -5,9 +5,10 @@ interface CardProps {
     question: string;
     response: string;
     state: boolean;
+    id: number;
 }
 
-const Card: React.FC<CardProps> = ({question, response, state}) => {
+const Card: React.FC<CardProps> = ({question, response, state, id}) => {
   const [estaVolteada, setEstaVolteada] = useState(state);
 
   const voltearTarjeta = () => {
@@ -16,6 +17,9 @@ const Card: React.FC<CardProps> = ({question, response, state}) => {
 
   return (
     <div className="w-full h-96 bg-slate-800 hover:bg-slate-700 hover:cursor-pointer p-2 rounded-lg relative transform transition-transform duration-500 ease-in-out" onClick={voltearTarjeta}>
+      {/* <div className='absolute -top-2 -right-2 h-7 w-7 bg-slate-500 cursor-pointer flex justify-center items-center rounded-full'>
+        X
+      </div> */}
       <div className={`w-full h-full absolute top-0 left-0 right-0 bottom-0 flex flex-col items-center justify-center transform ${estaVolteada ? 'rotate-y-180 rounded-lg hidden' : 'rotate-y-0'}`}>
         <p className='text-center p-2 text-white'>{ question }</p>
       </div>
