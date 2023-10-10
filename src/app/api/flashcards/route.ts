@@ -1,33 +1,43 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient()
 
 export async function GET(req: Request, re: Response) {
-    return new Response( JSON.stringify({nombre:'jjfjfjf'}) )
+    const alldata = await prisma.flashcard.findMany({
+        orderBy: [
+            {
+                id: 'desc'
+            }
+        ]
+    });
+    return new Response( JSON.stringify(alldata) )
 }
 export async function POST(req: Request, res: Response) {
     try {
-        const body = await req.json()
-        const {question, response, state} = body;
+        // Intenta obtener el cuerpo de la solicitud y extraer la pregunta, respuesta y estado del flashcard
+        const body = await req.json();
+        const { question, response, state } = body;
 
-        // Lee el archivo datacience.json
-        const filePath = path.join(process.cwd(), 'src', 'data', 'datacience.json');
-        const data = await fs.readFile(filePath, 'utf-8');
-        const dataArray = JSON.parse(data);
-
-        // Agrega el nuevo objeto al arreglo existente
-        dataArray.push({ question, response, state, id: dataArray.length + 1 });
-
-        // Escribe el contenido actualizado en el archivo
-        await fs.writeFile(filePath, JSON.stringify(dataArray, null, 2));
+        const data = await prisma.flashcard.create({
+            data: {
+                question,
+                response,
+            },
+        })
 
         // Devuelve una respuesta de éxito
-        return new Response( JSON.stringify({success: true, message:'Datos guardados correctamente'}) )
-    } catch (error) {
+        return new Response(
+          JSON.stringify({ success: true, message: 'Datos guardados correctamente' })
+        );
+      } catch (error) {
+        // En caso de error, imprime el error y devuelve una respuesta de error
         console.error(error);
-        return new Response( JSON.stringify({success: true, message:'Error al guardar los datos.'}) )
-    }
+        return new Response(
+          JSON.stringify({ success: false, message: 'Error al guardar los datos.' })
+        );
+      }
 }
 
 export async function DELETE(req: Request, res: Response) {

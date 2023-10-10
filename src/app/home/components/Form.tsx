@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import datacience from '@/data/datacience.json';
 
 interface FormProps {
-    
+    onClick: void
 }
 
-const Form: React.FC<FormProps> = ({}) => {
+const Form: React.FC<FormProps> = ({onClick}) => {
   const [question, setQuestion] = useState('');
   const [response, setResponse] = useState('');
 
   const addCard = async () => {
     try {
-        const res = await fetch('/api/addFlashcard', {
+        const res = await fetch('/api/flashcards', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -24,6 +24,7 @@ const Form: React.FC<FormProps> = ({}) => {
           console.log('Flashcard agregado correctamente.');
           setQuestion('');
           setResponse('');
+          onClick()
           // Realiza cualquier otra lógica necesaria después de agregar el flashcard.
         } else {
           console.error('Error al agregar el flashcard.');
@@ -34,7 +35,7 @@ const Form: React.FC<FormProps> = ({}) => {
   }
   const deleteCars = async () => {
     try {
-        const res = await fetch('/api/addFlashcard', {
+        const res = await fetch('/api/flashcards', {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
@@ -69,13 +70,12 @@ const Form: React.FC<FormProps> = ({}) => {
             </div>
             <div className='w-full flex gap-3 flex-col md:flex-row'>
                 <div className='w-full flex flex-col gap-1 justify-center rounded-full'>
-                    <button className='p-1 mt-3 rounded-lg bg-red-400 text-red-800' onClick={() => deleteCars()}>Eliminar Todas las Flashcard</button>
+                    <button className='p-1 mt-3 rounded-lg bg-slate-700 text-red-400' onClick={() => deleteCars()}>Eliminar Todas las Flashcard</button>
                 </div>
                 <div className='w-full flex flex-col gap-1 justify-center rounded-full'>
                     <button className='p-1 mt-3 rounded-lg bg-slate-700' onClick={() => addCard()}>Crear</button>
                 </div>
             </div>
-            
         </div>
         <div className='flex flex-col h-96 md-auto md:flex-row gap-2 w-full'>
             <div className={`w-full h-full flex flex-col items-center justify-center transform rotate-y-180 bg-emerald-700 rounded-lg`}>
